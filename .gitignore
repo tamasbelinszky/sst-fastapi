@@ -1,0 +1,20 @@
+# dependencies
+node_modules
+
+# sst
+.sst
+.build
+.vscode
+
+# opennext
+.open-next
+
+# misc
+.DS_Store
+
+# local env files
+.env*.local
+
+# python
+.venv
+__pycache__
