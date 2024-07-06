@@ -4,7 +4,10 @@ export function API({ stack }: StackContext) {
   const api = new Api(stack, "api", {
     defaults: {
       function: {
-        runtime: "python3.12",
+        runtime: "python3.10",
+        container: {
+          file: "packages/fastapi/Dockerfile",
+        },
       },
       throttle: {
         rate: 10,
