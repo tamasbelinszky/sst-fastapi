@@ -89,7 +89,9 @@ After you've installed all the prerequisites, follow these steps to set up and s
    pnpm install
    ```
 
-2.
+2. Install `/app`'s Python dependencies with poetry:
+
+   - Detailed steps: [`/app/README.md`](/app/README.md)
 
 3. Start the local development server:
    ```
