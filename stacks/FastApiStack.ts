@@ -4,9 +4,9 @@ export function API({ stack }: StackContext) {
   const api = new Api(stack, "api", {
     defaults: {
       function: {
-        runtime: "python3.10",
+        runtime: "python3.11",
         container: {
-          file: "packages/fastapi/Dockerfile",
+          file: "Dockerfile",
         },
       },
       throttle: {
@@ -17,11 +17,12 @@ export function API({ stack }: StackContext) {
     routes: {
       "ANY /{proxy+}": {
         function: {
-          handler: "packages/fastapi/app.handler",
+          handler: "app/main.handler",
         },
       },
-      "GET /docs": "packages/fastapi/app.handler",
-      "GET /openapi.json": "packages/fastapi/app.handler",
+      "GET /docs": "app/main.handler",
+      "GET /openapi.json": "app/main.handler",
+      "GET /hello": "app/functions/hello.handler",
     },
   });
 

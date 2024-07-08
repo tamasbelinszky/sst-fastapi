@@ -4,6 +4,7 @@ from mangum import Mangum
 from fastapi import FastAPI, Body
 
 from pydantic import BaseModel, EmailStr
+from app.core.models import User
 
 
 app = FastAPI(
@@ -18,18 +19,13 @@ def hello_world():
     return {"message": "hello world"}
 
 
-class ExampleBody(BaseModel):
-    full_name: str
-    email: EmailStr
-
-
 class ExampleResponse(BaseModel):
     message: str
     email: EmailStr
 
 
 @app.post("/", response_model=ExampleResponse)
-def create_user(body: Annotated[ExampleBody, Body()]):
+def create_user(body: Annotated[User, Body()]):
     return ExampleResponse(message="User created", email=body.email)
 
 
