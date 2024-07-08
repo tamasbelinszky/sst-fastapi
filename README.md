@@ -76,19 +76,22 @@ Let's go over these concepts and how SST can help us:
 
 - Node.js
 - Python
+- poetry
 - npm
 - pnpm
 - AWS account (with credentials configured in your environment. For setup instructions, please consult [Configure the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html))
 
 After you've installed all the prerequisites, follow these steps to set up and start your local development environment:
 
-1. Install project dependencies:
+1. Install npm dependencies:
 
    ```
    pnpm install
    ```
 
-2. Start the local development server:
+2.
+
+3. Start the local development server:
    ```
    pnpm dev
    ```
